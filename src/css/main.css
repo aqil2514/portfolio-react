@@ -415,7 +415,6 @@ body::-webkit-scrollbar {
 }
 #prof h1 {
   text-align: center;
-  white-space: nowrap;
   font-family: "Young Serif", sans-serif;
   color: white;
   transform-origin: left;
@@ -605,7 +604,6 @@ body::-webkit-scrollbar {
 
 .ct-contact {
   color: white;
-  width: 20%;
   margin: 0 auto;
   cursor: pointer;
   text-align: center;
@@ -964,6 +962,7 @@ body::-webkit-scrollbar {
   }
   #home {
     flex-direction: column-reverse;
+    height: auto !important;
   }
   #home #home-left-side {
     text-align: center;
@@ -981,5 +980,14 @@ body::-webkit-scrollbar {
   #home #home-right-side img {
     max-width: 12.5rem;
     max-height: 15.75rem;
+  }
+  #profile select {
+    width: 70%;
+  }
+  #prof .prof-container {
+    width: 100%;
+  }
+  #contact-form {
+    width: 90%;
   }
 }/*# sourceMappingURL=main.css.map */
