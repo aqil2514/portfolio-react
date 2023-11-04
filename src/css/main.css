@@ -987,6 +987,10 @@ body::-webkit-scrollbar {
   #prof .prof-container {
     width: 100%;
   }
+  .content-nofilter-image figure img {
+    width: 8rem !important;
+    height: 8rem !important;
+  }
   #contact-form {
     width: 90%;
   }
