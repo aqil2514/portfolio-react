@@ -1092,20 +1092,21 @@ body::-webkit-scrollbar {
   }
 
   #prof {
-    h1 {
-    }
     .prof-container {
       width: 100%;
+      flex-direction: column;
     }
   }
 
   .content-nofilter-image {
-    figure {
-      img {
-        width: 8rem !important;
-        height: 8rem !important;
-      }
-    }
+    flex-direction: column !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #fed-achievement-images figure,
+  #wat-skill-images figure {
+    margin: 1rem 0 0;
   }
 
   #contact-form {
