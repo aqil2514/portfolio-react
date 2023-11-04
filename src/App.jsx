@@ -456,7 +456,7 @@ function FEDAchievement({ lang, check, fedAch }) {
       {check.data.achievement.map((ach) => (
         <figure id={ach.id} onClick={(e) => clickHandler(e)} datatype="achievement" key={ach.id}>
           <img src={ach.imgUrl} alt={ach.achievementaName} />
-          <figcaption>{ach.achievementaName}</figcaption>
+          <figcaption>{ach.figcaption}</figcaption>
         </figure>
       ))}
       {check.data.achievement.map((achDetails) => (
