@@ -402,7 +402,7 @@ export const dataProfSection = [
           projectName: "Game Lingo DB",
           languages: "React JS, Bootstrap",
           date: "7/11/2023",
-          imgUrl: "https://i.imgur.com/CLOZUPJ.png",
+          imgUrl: "https://i.imgur.com/0GtIym1.png",
           projectLink: "https://gamelingo-db.netlify.app/",
           sourceLink: "https://github.com/aqil2514/game-lingo-db",
           descId:
