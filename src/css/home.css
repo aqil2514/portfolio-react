@@ -88,6 +88,9 @@
 #home #home-left-side #home-intro {
   font-family: "Young Serif", sans-serif;
   font-size: 2rem;
+  animation: typing 4.5s steps(40) infinite;
+  white-space: nowrap;
+  overflow: hidden;
 }
 #home #home-left-side #home-quotes {
   font-family: "Poppins", sans-serif;

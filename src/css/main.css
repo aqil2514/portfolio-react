@@ -235,6 +235,22 @@
     bottom: 100%;
   }
 }
+.opacity-salam {
+  opacity: 0.5;
+}
+
+.hide {
+  opacity: 0 !important;
+}
+
+.hide-prof {
+  opacity: 0 !important;
+}
+
+.show {
+  opacity: 1;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -417,9 +433,15 @@
   font-size: 1rem;
   color: #f4f80a;
 }
+#home #home-left-side .typing {
+  width: 10px;
+}
 #home #home-left-side #home-intro {
   font-family: "Young Serif", sans-serif;
   font-size: 2rem;
+  animation: typing 4.5s steps(40) infinite;
+  white-space: nowrap;
+  overflow: hidden;
 }
 #home #home-left-side #home-quotes {
   font-family: "Poppins", sans-serif;
@@ -588,30 +610,6 @@
 #profile select option {
   background-color: #150346;
   color: white;
-}
-
-.opacity-salam {
-  opacity: 0.5;
-}
-
-.typing {
-  white-space: nowrap;
-  overflow: hidden;
-  width: 10px;
-  font-size: 24px;
-  animation: typing 4.5s steps(40) infinite;
-}
-
-.hide {
-  opacity: 0 !important;
-}
-
-.hide-prof {
-  opacity: 0 !important;
-}
-
-.show {
-  opacity: 1;
 }
 
 #contact {
@@ -951,10 +949,13 @@ body::-webkit-scrollbar {
   }
   #home {
     flex-direction: column-reverse;
-    height: auto !important;
+    height: auto;
   }
   #home #home-left-side {
     text-align: center;
+  }
+  #home #home-left-side #home-intro {
+    font-size: 1.5rem;
   }
   #home #home-left-side p {
     margin: 10px auto;
@@ -980,7 +981,7 @@ body::-webkit-scrollbar {
   .content-nofilter-image {
     flex-direction: column !important;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
   #fed-achievement-images figure,
   #wat-skill-images figure {
