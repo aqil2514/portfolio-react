@@ -376,54 +376,6 @@ export const dataProfSection = [
       ],
       creativity: [
         {
-          id: "cr-sf",
-          projectName: "Survey Form",
-          languages: "HTML, CSS",
-          date: "23/3/2023",
-          imgUrl: "https://i.imgur.com/TPztbl6.png",
-          projectLink: "https://aqil2514.github.io/survey-form/",
-          sourceLink: "https://github.com/aqil2514/survey-form",
-          descId:
-            "Ini adalah project pertama saya dengan menggunakan HTML dan CSS saja. Ini juga merupakan project dari persyaratan sertifikat FreeCodeCamp pada materi Responsive Web Design. Di dalamnya, tersedia element table dengan beberapa input berbagai type.",
-          descEn: "This my first project in HTML and CSS. This also the requirements to get FreeCodeCamp's certificate on Responsive web Design. Inside, there are input elements with kinds of type.",
-        },
-        {
-          id: "cr-tp",
-          projectName: "Tribute Page",
-          languages: "HTML, CSS",
-          date: "26/3/2023",
-          imgUrl: "https://i.imgur.com/XdFFM2P.png",
-          projectLink: "https://aqil2514.github.io/tribute-page/",
-          sourceLink: "https://github.com/aqil2514/tribute-page",
-          descId:
-            "Ini adalah project kedua saya dengan menggunakan HTML dan CSS saja. Ini juga merupakan project dari persyaratan sertifikat FreeCodeCamp pada materi Responsive Web Design. Di dalamnya, tersedia beberapa hal yang menjelaskan tentang riwayat pendidikan saya.",
-          descEn: "This my second project in HTML and CSS. This also the requirements to get FreeCodeCamp's certificate on Responsive web Design. Inside, there are few about my educations.",
-        },
-        {
-          id: "cr-sj",
-          projectName: " Suwit Jawa",
-          languages: "HTML, CSS, JavaScript",
-          date: "26/3/2023",
-          imgUrl: "https://i.imgur.com/Ky3848Y.png",
-          projectLink: "https://aqil2514.github.io/suit-jawa/",
-          sourceLink: "https://github.com/aqil2514/suit-jawa",
-          descId:
-            "Ini adalah project pertama saya dengan menggunakan HTML, CSS, dan Javascript. Ini adalah sebuah game sederhana tentang suit jawa. Di dalamnya, sudah ditambahkan AI computer, sistem score, menang kalah, dan beberapa komponen lain.",
-          descEn: "This is my first project with Javascript. This is a simple game about Suit Jawa. Inside, there is simple AI, sccore system, win and lose.",
-        },
-        {
-          id: "cr-gg",
-          projectName: "Genshin Gallery",
-          languages: "HTML, CSS, jQuery, Bootstrap",
-          date: "30/5/2023",
-          imgUrl: "https://i.imgur.com/3hT8e3M.jpg",
-          projectLink: "https://aqil2514.github.io/Gallery-Genshin-Impact",
-          sourceLink: "https://github.com/aqil2514/Gallery-Genshin-Impact",
-          descId:
-            "Ini adalah project pertama saya dengan menggabungkan framework, library, dan pre-proccesor menjadi satu. Saya membuat sebuah situs sederhana dengan Slide Image yang dibuat menggunakan jQuery. Tidak hanya itu, saya juga mengatur apabila gambarnya berganti, makan background imagenya juga berganti.",
-          descEn: "This is my first project with combinating framework, library, and css pre-processor. I made a very simple site with Image Slider made by jQuery. The background also change if the image change.",
-        },
-        {
           id: "cr-tf",
           projectName: "Team Flow",
           languages: "HTML, SASS, jQuery",
@@ -444,6 +396,18 @@ export const dataProfSection = [
           sourceLink: "https://github.com/aqil2514/Genshin-Random-Quote",
           descId: "Project pribadi saya dalam menuntaskan sertifikat Front End Development Library di FreeCodeCamp. Masih ada bug.",
           descEn: "My private project in Front End Development Library in FreeCodeCamp. Still there`s a bug.",
+        },
+        {
+          id: "cr-gld",
+          projectName: "Game Lingo DB",
+          languages: "React JS, Bootstrap",
+          date: "7/11/2023",
+          imgUrl: "https://i.imgur.com/CLOZUPJ.png",
+          projectLink: "https://gamelingo-db.netlify.app/",
+          sourceLink: "https://github.com/aqil2514/game-lingo-db",
+          descId:
+            "Saya memiliki situs yang khusus untuk bahas game yang bernama Game Lingo (lihat situs ini di portofolio bagian penulis dan penerjemah). Kemudian, situs yang berisi tentang kumpulan data tersebut akan ada di sini. Situs ini pun nantinya akan berkembang seiring berkembangnya situs Game Lingo. Saya menggunakan API blogger untuk memuat daftar list.",
+          descEn: "I have a specifically site in disscussing about game. That is Game Lingo (You can see at writer & translation field). This site is focus to all of data from Game Lingo. I use blogger API in creating list of contents.",
         },
       ],
     },
