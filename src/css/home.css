@@ -1,0 +1,142 @@
+.home-button-container {
+  text-align: center;
+}
+
+.button {
+  position: relative;
+  cursor: pointer;
+  width: 10rem;
+  height: 2rem;
+  margin: 0 auto;
+  border: none;
+  overflow: hidden;
+  color: white;
+  background: transparent;
+  font-size: 1rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 900;
+  transition: 0.5s;
+}
+.button:hover {
+  transform: scale(1.2);
+  background-color: aqua;
+  box-shadow: 0 0 5px #81e2f3, 0 0 25px #81e2f3, 0 0 50px #81e2f3, 0 0 75px #81e2f3, 0 0 100px #81e2f3;
+}
+.button span {
+  position: absolute;
+}
+.button span:nth-child(1) {
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-animation1 1s linear infinite;
+}
+.button span:nth-child(2) {
+  top: -100%;
+  right: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-animation2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+.button span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  right: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-animation3 1s linear infinite;
+  animation-delay: 0.5s;
+}
+.button span:nth-child(4) {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #03e9f4);
+  animation: btn-animation4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+
+#home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: #04010e;
+  padding: 7rem 12rem;
+  color: white;
+}
+#home #home-left-side {
+  margin-top: 3rem;
+  max-width: 580px;
+  transition: 2s;
+}
+#home #home-left-side p {
+  margin: 10px 0;
+}
+#home #home-left-side #home-hello {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  color: #f4f80a;
+}
+#home #home-left-side #home-intro {
+  font-family: "Young Serif", sans-serif;
+  font-size: 2rem;
+}
+#home #home-left-side #home-quotes {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+}
+#home #home-left-side #home-select-prof {
+  width: 100%;
+  height: 2rem;
+  border-radius: 10px 10px 0 0;
+  background-color: transparent;
+  color: #fff;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1rem;
+  font-weight: 900;
+  text-align: center;
+}
+#home #home-left-side #home-select-prof option {
+  background-color: #04010e;
+}
+#home #home-left-side #home-sosmed {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  transition: 0.5s;
+}
+#home #home-left-side #home-sosmed a img {
+  filter: contrast(0);
+  transition: 0.5s;
+  width: 4.5rem;
+  height: 4.5rem;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#home #home-left-side #home-sosmed a img:hover {
+  filter: contrast(1);
+  background-color: #fff;
+  border-radius: 50%;
+}
+#home #home-right-side {
+  transition: 2s;
+}
+#home #home-right-side img {
+  max-width: 22.5rem;
+  max-height: 18.75rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: contrast(1.5);
+  transition: 0.5s;
+}/*# sourceMappingURL=home.css.map */

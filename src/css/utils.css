@@ -1,0 +1,23 @@
+.opacity-salam {
+  opacity: 0.5;
+}
+
+.typing {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 10px;
+  font-size: 24px;
+  animation: typing 4.5s steps(40) infinite;
+}
+
+.hide {
+  opacity: 0 !important;
+}
+
+.hide-prof {
+  opacity: 0 !important;
+}
+
+.show {
+  opacity: 1;
+}/*# sourceMappingURL=utils.css.map */

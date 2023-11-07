@@ -1,0 +1,68 @@
+#contact {
+  width: 100%;
+  min-height: 100vh;
+  padding: 4rem 1rem;
+  background-color: #04010e;
+
+  h1 {
+    font-family: "Young Serif", sans-serif;
+    text-align: center;
+    color: white;
+  }
+}
+
+#contact-form {
+  display: block;
+  margin: 4rem auto;
+  width: 50%;
+
+  h2 {
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    margin: 1rem;
+    user-select: none;
+    font-size: 1rem;
+  }
+
+  label {
+    display: block;
+    color: white;
+    text-align: center;
+    font-family: "Young Serif", sans-serif;
+
+    input,
+    textarea {
+      position: relative;
+      margin: 1rem auto;
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      font-weight: bold;
+      display: block;
+      width: 100%;
+      height: 3rem;
+    }
+
+    textarea {
+      height: 100px;
+    }
+  }
+
+  button {
+    display: block;
+    margin: 1rem auto;
+    padding: 1rem 3rem;
+    background-color: transparent;
+    color: white;
+    font-family: "Young Serif", sans-serif;
+    font-weight: 900;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border: 4px solid white;
+    border-radius: 1rem;
+    transition: 0.5s;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
