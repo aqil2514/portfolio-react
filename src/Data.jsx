@@ -310,6 +310,11 @@ export const dataProfSection = [
           imgUrl: "https://i.imgur.com/VedGM4l.png",
         },
         {
+          id: "lang-tailwind",
+          langName: "Tailwind CSS",
+          imgUrl: "https://i.imgur.com/XrSFGI7.png",
+        },
+        {
           id: "lang-sass",
           langName: "SASS",
           imgUrl: "https://i.imgur.com/dpqOxCg.png",
@@ -338,6 +343,16 @@ export const dataProfSection = [
           id: "lang-react",
           langName: "React Js",
           imgUrl: "https://i.imgur.com/H4AfQst.png",
+        },
+        {
+          id: "lang-ejs",
+          langName: "EJS",
+          imgUrl: "https://i.imgur.com/harRjum.png",
+        },
+        {
+          id: "lang-mongo",
+          langName: "Mongo DB",
+          imgUrl: "https://i.imgur.com/D7iOn1l.png",
         },
       ],
       achievement: [
