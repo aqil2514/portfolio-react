@@ -60,16 +60,16 @@
   display: none;
 }
 
-// .toggle-lang {
-//   &::before {
-//     background-color: #320341 !important;
-//   }
+.toggle-lang {
+  &::before {
+    background-color: #320341 !important;
+  }
 
-//   &::after {
-//     left: 60% !important;
-//     background-color: white !important;
-//   }
-// }
+  &::after {
+    left: 60% !important;
+    background-color: white !important;
+  }
+}
 
 .title {
   color: white;

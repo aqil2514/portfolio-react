@@ -113,7 +113,7 @@
 #home #home-left-side #home-sosmed {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-top: 3rem;
   transition: 0.5s;
 }
 #home #home-left-side #home-sosmed a img {
@@ -128,8 +128,6 @@
 }
 #home #home-left-side #home-sosmed a img:hover {
   filter: contrast(1);
-  background-color: #fff;
-  border-radius: 50%;
 }
 #home #home-right-side {
   transition: 2s;

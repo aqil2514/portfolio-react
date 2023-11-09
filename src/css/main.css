@@ -235,22 +235,6 @@
     bottom: 100%;
   }
 }
-.opacity-salam {
-  opacity: 0.5;
-}
-
-.hide {
-  opacity: 0 !important;
-}
-
-.hide-prof {
-  opacity: 0 !important;
-}
-
-.show {
-  opacity: 1;
-}
-
 .navigation {
   display: flex;
   justify-content: space-between;
@@ -306,6 +290,14 @@
 
 #nav-mobile {
   display: none;
+}
+
+.toggle-lang::before {
+  background-color: #320341 !important;
+}
+.toggle-lang::after {
+  left: 60% !important;
+  background-color: white !important;
 }
 
 .title {
@@ -433,9 +425,6 @@
   font-size: 1rem;
   color: #f4f80a;
 }
-#home #home-left-side .typing {
-  width: 10px;
-}
 #home #home-left-side #home-intro {
   font-family: "Young Serif", sans-serif;
   font-size: 2rem;
@@ -464,7 +453,7 @@
 #home #home-left-side #home-sosmed {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-top: 3rem;
   transition: 0.5s;
 }
 #home #home-left-side #home-sosmed a img {
@@ -479,8 +468,6 @@
 }
 #home #home-left-side #home-sosmed a img:hover {
   filter: contrast(1);
-  background-color: #fff;
-  border-radius: 50%;
 }
 #home #home-right-side {
   transition: 2s;
@@ -610,6 +597,22 @@
 #profile select option {
   background-color: #150346;
   color: white;
+}
+
+.opacity-salam {
+  opacity: 0.5;
+}
+
+.hide {
+  opacity: 0 !important;
+}
+
+.hide-prof {
+  opacity: 0 !important;
+}
+
+.show {
+  opacity: 1;
 }
 
 #contact {

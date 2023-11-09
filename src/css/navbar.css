@@ -55,6 +55,14 @@
   display: none;
 }
 
+.toggle-lang::before {
+  background-color: #320341 !important;
+}
+.toggle-lang::after {
+  left: 60% !important;
+  background-color: white !important;
+}
+
 .title {
   color: white;
   font-family: "Poppins", sans-serif;

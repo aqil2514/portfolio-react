@@ -120,15 +120,13 @@
     #home-sosmed {
       display: flex;
       justify-content: space-between;
-      margin-top: 1rem;
+      margin-top: 3rem;
       transition: 0.5s;
 
       a {
         img {
           &:hover {
             filter: contrast(1);
-            background-color: #fff;
-            border-radius: 50%;
           }
           filter: contrast(0);
           transition: 0.5s;
