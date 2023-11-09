@@ -7,10 +7,13 @@ export default function Home({ lang }) {
     const homeLeft = document.getElementById("home-left-side");
     const homeRight = document.getElementById("home-right-side");
 
+    homeLeft.classList.add("left-slide-in");
+    homeRight.classList.add("right-slide-in");
+
     setTimeout(() => {
-      homeLeft.classList.replace("hide", "show");
-      homeRight.classList.replace("hide", "show");
-    }, 1000);
+      homeLeft.classList.remove("left-slide-in");
+      homeRight.classList.remove("right-slide-in");
+    }, 1100);
   }, [lang]);
 
   function handlerClick() {
@@ -26,7 +29,7 @@ export default function Home({ lang }) {
 
   return (
     <section id="home">
-      <div id="home-left-side" className="hide">
+      <div id="home-left-side">
         <p id="home-hello">{lang ? data.helloEN : data.helloID}</p>
 
         <p className="typing" id="home-intro">
@@ -50,7 +53,7 @@ export default function Home({ lang }) {
           ))}
         </div>
       </div>
-      <div id="home-right-side" className="hide">
+      <div id="home-right-side">
         <img id="img-home" src={data.imageUrl[index]} alt="Me" />
       </div>
     </section>

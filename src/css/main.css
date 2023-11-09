@@ -249,6 +249,20 @@
     opacity: 1;
   }
 }
+.right-slide-in {
+  animation: right-slide-in 1s 1 ease-in-out;
+}
+
+@keyframes right-slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
 .bottom-slide-in {
   animation: bottom-slide-in 1s 1 ease-in-out;
 }

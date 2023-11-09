@@ -19,9 +19,7 @@ export default function Profil({ lang, setProf, prof }) {
       salam.classList.remove("figures-animation1");
       h1.classList.remove("left-slide-in");
       article.classList.remove("bottom-slide-in");
-    }, 2000);
-
-    console.log(salam, h1, article);
+    }, 1100);
   }, [lang]);
 
   function changeHandler(e) {
