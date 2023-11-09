@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect, useId } from "react";
 import { dataProfSection as data } from "../data/Profession";
+import { loadData } from "../utils/functions";
 
 export default function Prof({ lang, prof }) {
   const checkProfName = (prof) => {
@@ -97,11 +98,13 @@ export default function Prof({ lang, prof }) {
       <h1 id="title-prof" ref={profTitle}>
         {lang ? (
           <>
-            This is my portfolio in <span ref={profSub}>{checkProfName(prof)?.nameEn} field</span>
+            This is my portfolio in <br />
+            <span ref={profSub}>{checkProfName(prof)?.nameEn} field</span>
           </>
         ) : (
           <>
-            Ini adalah portofolio saya di bidang <span ref={profSub}>{checkProfName(prof)?.nameId}</span>
+            Ini adalah portofolio saya di bidang <br />
+            <span ref={profSub}>{checkProfName(prof)?.nameId}</span>
           </>
         )}
       </h1>
@@ -128,59 +131,29 @@ export default function Prof({ lang, prof }) {
 }
 
 function FrontEndDeveloper({ lang, check, profIndex }) {
-  const fedLang = useRef(null);
+  const fedSkill = useRef(null);
   const fedAch = useRef(null);
   const fedCrea = useRef(null);
 
   useEffect(() => {
-    if (profIndex === 0) {
-      fedLang.current.classList.remove("hide-prof");
-      fedAch.current.classList.add("hide-prof");
-      fedCrea.current.classList.add("hide-prof");
-
-      setTimeout(() => {
-        fedLang.current.style.display = "flex";
-        fedAch.current.style.display = "none";
-        fedCrea.current.style.display = "none";
-      }, 500);
-    } else if (profIndex === 1) {
-      fedLang.current.classList.add("hide-prof");
-      fedAch.current.classList.remove("hide-prof");
-      fedCrea.current.classList.add("hide-prof");
-
-      setTimeout(() => {
-        fedLang.current.style.display = "none";
-        fedAch.current.style.display = "flex";
-        fedCrea.current.style.display = "none";
-      }, 500);
-    } else if (profIndex === 2) {
-      fedLang.current.classList.add("hide-prof");
-      fedAch.current.classList.add("hide-prof");
-      fedCrea.current.classList.remove("hide-prof");
-
-      setTimeout(() => {
-        fedLang.current.style.display = "none";
-        fedAch.current.style.display = "none";
-        fedCrea.current.style.display = "flex";
-      }, 500);
-    }
+    loadData(fedSkill, fedAch, fedCrea, profIndex);
   }, [profIndex]);
 
   return (
-    <div>
-      <FEDLanguage check={check} profIndex={profIndex} lang={lang} fedLang={fedLang} />
+    <div style={{ display: "flex" }}>
+      <FEDSkill check={check} profIndex={profIndex} lang={lang} fedSkill={fedSkill} />
       <FEDAchievement check={check} profIndex={profIndex} lang={lang} fedAch={fedAch} />
       <FEDCreativity check={check} profIndex={profIndex} lang={lang} fedCrea={fedCrea} />
     </div>
   );
 }
 
-function FEDLanguage({ lang, check, fedLang }) {
+function FEDSkill({ lang, check, fedSkill }) {
   return (
-    <div id="fed-language-images" ref={fedLang} className="prof-content">
+    <div id="fed-language-images" ref={fedSkill} className="prof-content">
       <h2 id="react-language-title">{lang ? "These are languages I mastered" : "Ini bahasa yang saya kuasai"}</h2>
       {check.data.lang.map((lang) => (
-        <figure id={lang.id} key={lang.id}>
+        <figure className="prof-figure-content1" id={lang.id} key={lang.id}>
           <img src={lang.imgUrl} alt={lang.langName} />
           <figcaption>{lang.langName}</figcaption>
         </figure>
@@ -202,10 +175,10 @@ function FEDAchievement({ lang, check, fedAch }) {
   }
 
   return (
-    <div id="fed-achievement-images" style={{ display: "none" }} ref={fedAch} className="prof-content content-nofilter-image">
+    <div id="fed-achievement-images" style={{ display: "none" }} ref={fedAch} className="prof-content">
       <h2 id="react-achievement-title">{lang ? "These are my achievements" : "Ini penghargaan saya"}</h2>
       {check.data.achievement.map((ach) => (
-        <figure id={ach.id} onClick={(e) => clickHandler(e)} datatype="achievement" key={ach.id}>
+        <figure className="prof-figure-content2" id={ach.id} onClick={(e) => clickHandler(e)} datatype="achievement" key={ach.id}>
           <img src={ach.imgUrl} alt={ach.achievementaName} />
           <figcaption>{ach.figcaption}</figcaption>
         </figure>
@@ -238,10 +211,10 @@ function FEDCreativity({ lang, check, fedCrea }) {
   }
 
   return (
-    <div id="fed-creativity-images" style={{ display: "none" }} ref={fedCrea} className="prof-content content-nofilter-image">
+    <div id="fed-creativity-images" style={{ display: "none" }} ref={fedCrea} className="prof-content">
       <h2 id="react-creativity-title">{lang ? "These are my projects" : "Ini project saya"}</h2>
       {check.data.creativity.map((cre) => (
-        <figure id={cre.id} onClick={(e) => clickHandler(e)} datatype="creativity" key={cre.id}>
+        <figure className="prof-figure-content2" id={cre.id} onClick={(e) => clickHandler(e)} datatype="creativity" key={cre.id}>
           <img src={cre.imgUrl} alt={cre.projectName} />
           <figcaption>{cre.projectName}</figcaption>
         </figure>
@@ -282,37 +255,7 @@ function WriteAndTranslation({ lang, check, profIndex }) {
   const watCrea = useRef(null);
 
   useEffect(() => {
-    if (profIndex === 0) {
-      watSkill.current.classList.remove("hide-prof");
-      watAch.current.classList.add("hide-prof");
-      watCrea.current.classList.add("hide-prof");
-
-      setTimeout(() => {
-        watSkill.current.style.display = "flex";
-        watAch.current.style.display = "none";
-        watCrea.current.style.display = "none";
-      }, 500);
-    } else if (profIndex === 1) {
-      watSkill.current.classList.add("hide-prof");
-      watAch.current.classList.remove("hide-prof");
-      watCrea.current.classList.add("hide-prof");
-
-      setTimeout(() => {
-        watSkill.current.style.display = "none";
-        watAch.current.style.display = "flex";
-        watCrea.current.style.display = "none";
-      }, 500);
-    } else if (profIndex === 2) {
-      watSkill.current.classList.add("hide-prof");
-      watAch.current.classList.add("hide-prof");
-      watCrea.current.classList.remove("hide-prof");
-
-      setTimeout(() => {
-        watSkill.current.style.display = "none";
-        watAch.current.style.display = "none";
-        watCrea.current.style.display = "flex";
-      }, 500);
-    }
+    loadData(watSkill, watAch, watCrea, profIndex);
   }, [profIndex]);
 
   return (
@@ -329,7 +272,7 @@ function WATSkill({ lang, check, watSkill }) {
     <div id="wat-skill-images" ref={watSkill} className="prof-content">
       <h2 id="wat-skill-title">{lang ? "These are things I mastered" : "Ini hal yang saya kuasai"}</h2>
       {check.data.skill.map((s) => (
-        <figure id={s.id} key={s.id}>
+        <figure className="prof-figure-content1" id={s.id} key={s.id}>
           <img src={s.imgUrl} alt={s.skillName} />
           <figcaption>{s.skillName}</figcaption>
         </figure>
@@ -351,10 +294,10 @@ function WATAchievement({ lang, check, watAch }) {
   }
 
   return (
-    <div id="fed-achievement-images" style={{ display: "none" }} ref={watAch} className="prof-content content-nofilter-image">
+    <div id="wat-achievement-images" style={{ display: "none" }} ref={watAch} className="prof-content">
       <h2 id="react-achievement-title">{lang ? "These are my achievements" : "Ini penghargaan saya"}</h2>
       {check.data.achievement.map((ach) => (
-        <figure id={ach.id} onClick={(e) => clickHandler(e)} datatype="achievement" key={ach.id}>
+        <figure className="prof-figure-content2" id={ach.id} onClick={(e) => clickHandler(e)} datatype="achievement" key={ach.id}>
           <img src={ach.imgUrl} alt={lang ? ach.aNameEN : ach.aNameID} />
           <figcaption>{lang ? ach.figcaptionEN : ach.figcaptionID}</figcaption>
         </figure>
@@ -384,10 +327,10 @@ function WATCreativity({ lang, check, watCrea }) {
   }
 
   return (
-    <div id="fed-creativity-images" style={{ display: "none" }} ref={watCrea} className="prof-content content-nofilter-image">
+    <div id="was-creativity-images" style={{ display: "none" }} ref={watCrea} className="prof-content">
       <h2 id="react-creativity-title">{lang ? "These are my projects" : "Ini project saya"}</h2>
       {check.data.creativity.map((cre) => (
-        <figure id={cre.id} onClick={(e) => clickHandler(e)} datatype="creativity" key={cre.id}>
+        <figure className="prof-figure-content2" id={cre.id} onClick={(e) => clickHandler(e)} datatype="creativity" key={cre.id}>
           <img src={cre.imgUrl} alt={cre.projectName} />
           <figcaption>{lang ? cre.figcaptionEN : cre.figcaptionID}</figcaption>
         </figure>
@@ -425,37 +368,7 @@ function VideoEditor({ lang, check, profIndex }) {
   const veCrea = useRef(null);
 
   useEffect(() => {
-    if (profIndex === 0) {
-      veSkill.current.classList.remove("hide-prof");
-      veAch.current.classList.add("hide-prof");
-      veCrea.current.classList.add("hide-prof");
-
-      setTimeout(() => {
-        veSkill.current.style.display = "flex";
-        veAch.current.style.display = "none";
-        veCrea.current.style.display = "none";
-      }, 500);
-    } else if (profIndex === 1) {
-      veSkill.current.classList.add("hide-prof");
-      veAch.current.classList.remove("hide-prof");
-      veCrea.current.classList.add("hide-prof");
-
-      setTimeout(() => {
-        veSkill.current.style.display = "none";
-        veAch.current.style.display = "flex";
-        veCrea.current.style.display = "none";
-      }, 500);
-    } else if (profIndex === 2) {
-      veSkill.current.classList.add("hide-prof");
-      veAch.current.classList.add("hide-prof");
-      veCrea.current.classList.remove("hide-prof");
-
-      setTimeout(() => {
-        veSkill.current.style.display = "none";
-        veAch.current.style.display = "none";
-        veCrea.current.style.display = "flex";
-      }, 500);
-    }
+    loadData(veSkill, veAch, veCrea, profIndex);
   }, [profIndex]);
 
   return (
@@ -472,7 +385,7 @@ function VESkill({ lang, check, veSkill }) {
     <div id="ve-skill-images" ref={veSkill} className="prof-content">
       <h2 id="ve-skill-title">{lang ? "These are things I mastered" : "Ini hal yang saya kuasai"}</h2>
       {check.data.skill.map((s) => (
-        <figure id={s.id} key={s.id}>
+        <figure className="prof-figure-content1" id={s.id} key={s.id}>
           <img src={s.imgUrl} alt={s.skillName} />
           <figcaption>{s.skillName}</figcaption>
         </figure>
@@ -494,12 +407,12 @@ function VEAchievement({ lang, check, veAch }) {
   }
 
   return (
-    <div id="fed-achievement-images" style={{ display: "none" }} ref={veAch} className="prof-content content-nofilter-image">
-      <h2 id="react-achievement-title">{lang ? "These are my achievements" : "Ini penghargaan saya"}</h2>
+    <div id="ve-achievement-images" style={{ display: "none" }} ref={veAch} className="prof-content">
+      <h2 id="ve-achievement-title">{lang ? "These are my achievements" : "Ini penghargaan saya"}</h2>
 
       {check.data.achievement.length !== 0 ? (
         check.data.achievement.map((ach) => (
-          <figure id={ach.id} onClick={(e) => clickHandler(e)} datatype="achievement" key={ach.id}>
+          <figure className="prof-figure-content2" id={ach.id} onClick={(e) => clickHandler(e)} datatype="achievement" key={ach.id}>
             <img src={ach.imgUrl} alt={lang ? ach.aNameEN : ach.aNameID} />
             <figcaption>{lang ? ach.figcaptionEN : ach.figcaptionID}</figcaption>
           </figure>
@@ -534,10 +447,10 @@ function VECreativity({ lang, check, veCrea }) {
   }
 
   return (
-    <div id="fed-creativity-images" style={{ display: "none" }} ref={veCrea} className="prof-content content-nofilter-image">
+    <div id="ve-creativity-images" style={{ display: "none" }} ref={veCrea} className="prof-content">
       <h2 id="react-creativity-title">{lang ? "These are my projects" : "Ini project saya"}</h2>
       {check.data.creativity.map((cre) => (
-        <figure id={cre.id} onClick={(e) => clickHandler(e)} datatype="creativity" key={cre.id}>
+        <figure className="prof-figure-content2" id={cre.id} onClick={(e) => clickHandler(e)} datatype="creativity" key={cre.id}>
           <img src={cre.imgUrl} alt={cre.projectName} />
           <figcaption>{lang ? cre.figcaptionEN : cre.figcaptionID}</figcaption>
         </figure>

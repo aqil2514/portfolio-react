@@ -95,6 +95,7 @@
 }
 
 .prof-container {
+  display: flex;
   position: relative;
   color: white;
   text-align: center;
@@ -130,26 +131,27 @@
   justify-content: center;
   flex-wrap: wrap;
   margin: 2rem auto;
-  padding: 2rem;
+  padding: 2rem 2rem 6rem;
   width: 100%;
   height: 100%;
   opacity: 1;
   transition: 0.5s;
   overflow: hidden;
 }
-.prof-container .prof-content figure {
+
+.prof-figure-content1 {
   width: 25%;
   height: auto;
   margin: 1rem;
 }
-.prof-container .prof-content figure:hover > figcaption {
+.prof-figure-content1:hover > figcaption {
   transform: translateY(0);
   opacity: 1;
 }
-.prof-container .prof-content figure:hover > img {
+.prof-figure-content1:hover > img {
   filter: contrast(1);
 }
-.prof-container .prof-content figure figcaption {
+.prof-figure-content1 figcaption {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
@@ -159,7 +161,7 @@
   transform: translateY(-500%);
   opacity: 0;
 }
-.prof-container .prof-content figure img {
+.prof-figure-content1 img {
   filter: contrast(0);
   width: 100%;
   height: 100%;
@@ -168,28 +170,35 @@
   -o-object-fit: contain;
      object-fit: contain;
 }
-.prof-container .content-nofilter-image figure:hover > img {
-  filter: brightness(20%) !important;
-}
-.prof-container .content-nofilter-image figure img {
-  width: 10rem !important;
-  height: 10rem !important;
-  -o-object-fit: cover !important;
-     object-fit: cover !important;
-  filter: none !important;
-  cursor: pointer;
-}
 
-#fed-achievement-images,
-#wat-skill-images {
-  justify-content: space-around;
+.prof-figure-content2 {
+  width: 25%;
+  height: auto;
+  margin: 1rem;
 }
-#fed-achievement-images figure,
-#wat-skill-images figure {
-  margin: 2.5rem 1rem;
+.prof-figure-content2:hover > figcaption {
+  transform: translateY(0);
+  opacity: 1;
 }
-#fed-achievement-images figure img,
-#wat-skill-images figure img {
+.prof-figure-content2:hover > img {
+  filter: none;
+}
+.prof-figure-content2 figcaption {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-family: "Young Serif", sans-serif;
+  font-weight: 900;
+  transition: 0.5s;
+  transform: translateY(-500%);
+  opacity: 0;
+}
+.prof-figure-content2 img {
+  filter: none;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  transition: 0.5s;
   -o-object-fit: cover;
      object-fit: cover;
 }

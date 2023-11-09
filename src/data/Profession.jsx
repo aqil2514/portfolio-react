@@ -13,32 +13,32 @@ export const dataProfSection = [
         {
           id: "skill-sw",
           skillName: "SEO Writer",
-          imgUrl: "https://i.imgur.com/pRKb8tT.jpg",
+          imgUrl: "https://i.imgur.com/dZ8gwF9.png",
         },
         {
           id: "skill-grammar",
           skillName: "Grammar",
-          imgUrl: "https://i.imgur.com/t4B5ONl.jpg",
+          imgUrl: "https://i.imgur.com/j3al5Kg.png",
         },
         {
           id: "skill-editing",
           skillName: "Script Editing",
-          imgUrl: "https://i.imgur.com/nOxlUhL.jpg",
+          imgUrl: "https://i.imgur.com/SibBEBB.png",
         },
         {
           id: "skill-idea",
           skillName: "Idea Writing",
-          imgUrl: "https://i.imgur.com/1jQaiQD.jpg",
+          imgUrl: "https://i.imgur.com/XO3l8Qw.png",
         },
         {
           id: "skill-msword",
           skillName: "Ms. Word",
-          imgUrl: "https://i.imgur.com/Ld3dl12.png",
+          imgUrl: "https://i.imgur.com/5QD4Fsb.png",
         },
         {
           id: "skill-translate",
           skillName: "Translating",
-          imgUrl: "https://i.imgur.com/46MySlC.jpg",
+          imgUrl: "https://i.imgur.com/ucgJNhK.png",
         },
       ],
       achievement: [

@@ -117,26 +117,26 @@ body::-webkit-scrollbar {
   #prof {
     .prof-container {
       width: 100%;
-      flex-direction: column;
+    }
+
+    .prof-figure-content2 {
+      width: 50%;
+      margin: 1rem 0;
+    }
+
+    .prof-content {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: flex-start;
+      justify-content: flex-start;
     }
     .prof-detail {
-      width: 95%;
-      height: 90%;
+      width: 85%;
+      height: 100%;
       img {
         width: 100%;
       }
     }
-  }
-
-  .content-nofilter-image {
-    flex-direction: column !important;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  #fed-achievement-images figure,
-  #wat-skill-images figure {
-    margin: 1rem 0 0;
   }
 
   #contact-form {
