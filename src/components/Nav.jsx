@@ -38,7 +38,26 @@ export default function Nav({ setLang, lang }) {
   }
 
   function menuClick() {
+    const menu = document.getElementById("nav-mobile");
+
     setActive(!active);
+
+    if (!menu.classList.contains("nav-mobile-active")) {
+      test(menu);
+      return;
+    }
+  }
+
+  function test(e) {
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      const nav = document.getElementById("navigation");
+      const menu = document.getElementById("ham-menu");
+
+      if (target !== e && target !== nav && target !== menu) {
+        setActive(false);
+      }
+    });
   }
 
   return (

@@ -95,6 +95,11 @@
     article {
       color: white;
       font-family: "Poppins", sans-serif;
+
+      p {
+        line-height: 1.5;
+        margin: 1rem 0;
+      }
     }
   }
 
@@ -115,5 +120,39 @@
       background-color: #150346;
       color: white;
     }
+  }
+}
+
+#read-mode {
+  margin: 1rem 0;
+  button {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: white;
+    background-color: transparent;
+    border: 4px solid white;
+    border-radius: 1rem;
+    transition: 0.5s;
+
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+
+    p {
+      display: inline;
+    }
+  }
+}
+
+.read-mode-button-click {
+  background-color: white !important;
+  color: black !important;
+  &:hover {
+    color: white !important;
+    background-color: transparent !important;
   }
 }

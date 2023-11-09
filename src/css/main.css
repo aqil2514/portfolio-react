@@ -581,6 +581,10 @@
   color: white;
   font-family: "Poppins", sans-serif;
 }
+#profile #container-greetings article p {
+  line-height: 1.5;
+  margin: 1rem 0;
+}
 #profile select {
   display: block;
   margin: 1rem auto;
@@ -597,6 +601,38 @@
 #profile select option {
   background-color: #150346;
   color: white;
+}
+
+#read-mode {
+  margin: 1rem 0;
+}
+#read-mode button {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: white;
+  background-color: transparent;
+  border: 4px solid white;
+  border-radius: 1rem;
+  transition: 0.5s;
+}
+#read-mode button:hover {
+  background-color: white;
+  color: black;
+}
+#read-mode button p {
+  display: inline;
+}
+
+.read-mode-button-click {
+  background-color: white !important;
+  color: black !important;
+}
+.read-mode-button-click:hover {
+  color: white !important;
+  background-color: transparent !important;
 }
 
 .opacity-salam {
@@ -976,6 +1012,9 @@ body::-webkit-scrollbar {
   #home #home-right-side img {
     max-width: 12.5rem;
     max-height: 15.75rem;
+  }
+  #profile button {
+    padding: 0.5rem 1rem;
   }
   #profile select {
     width: 70%;

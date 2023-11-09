@@ -1,8 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { dataProfil as data } from "../data/Profile";
 import { dataHome } from "../data/Home";
 
 export default function Profil({ lang, setProf, prof }) {
+  const bookIcon = useRef(null);
+
   useEffect(() => {
     const selectorSpan = document.querySelectorAll(".salam span");
 
@@ -19,19 +21,6 @@ export default function Profil({ lang, setProf, prof }) {
       }
     }, 100);
   }, [lang, prof]);
-
-  function Salam() {
-    const salam = "Assalamu`alaikum Wr. Wb.";
-    const splitSalam = salam.split("");
-    let key = 0;
-    const spanSalam = splitSalam.map((item) => <span key={key++}>{item}</span>);
-
-    return (
-      <h2 className="salam" onClick={() => console.log(splitSalam)}>
-        {spanSalam}
-      </h2>
-    );
-  }
 
   function changeHandler(e) {
     const profSection = document.getElementById("prof");
@@ -66,18 +55,36 @@ export default function Profil({ lang, setProf, prof }) {
     );
   }
 
+  function buttonHandler() {
+    const icon = bookIcon.current;
+    const button = icon.parentElement;
+    const text = button.lastChild;
+    const spans = document.querySelectorAll("#container-greetings > span");
+
+    if (icon.classList.contains("bi-book")) {
+      icon.classList.replace("bi-book", "bi-book-fill");
+      button.classList.add("read-mode-button-click");
+      text.innerText = lang ? "Off Mode" : "Matikan Mode";
+
+      for (const span of spans) {
+        span.classList.remove("animation-border-greetings");
+      }
+    } else {
+      icon.classList.replace("bi-book-fill", "bi-book");
+      button.classList.remove("read-mode-button-click");
+      text.innerText = lang ? "Read Mode" : "Mode Baca";
+
+      for (const span of spans) {
+        span.classList.add("animation-border-greetings");
+      }
+    }
+  }
+
   return (
     <section id="profile" style={{ display: "none" }}>
       <h1>{lang ? "My Profile" : "Profile Saya"}</h1>
       <div id="container-greetings">
-        <span className="animation-border-greetings"></span>
-        <span className="animation-border-greetings"></span>
-        <span className="animation-border-greetings"></span>
-        <span className="animation-border-greetings"></span>
-        <span className="animation-border-greetings"></span>
-        <span className="animation-border-greetings"></span>
-        <span className="animation-border-greetings"></span>
-        <span className="animation-border-greetings"></span>
+        <Animations />
         <article>
           <Salam />
           <p>{lang ? data.descEn : data.descId}</p>
@@ -89,7 +96,40 @@ export default function Profil({ lang, setProf, prof }) {
           <p>{lang ? data.closingEn : data.closingId}</p>
         </article>
       </div>
+      <div id="read-mode">
+        <button onClick={buttonHandler}>
+          <i ref={bookIcon} className="bi bi-book"></i> <p>{lang ? "Read Mode" : "Mode Baca"}</p>
+        </button>
+      </div>
       <Select />
     </section>
+  );
+}
+
+function Animations() {
+  return (
+    <>
+      <span className="animation-border-greetings"></span>
+      <span className="animation-border-greetings"></span>
+      <span className="animation-border-greetings"></span>
+      <span className="animation-border-greetings"></span>
+      <span className="animation-border-greetings"></span>
+      <span className="animation-border-greetings"></span>
+      <span className="animation-border-greetings"></span>
+      <span className="animation-border-greetings"></span>
+    </>
+  );
+}
+
+function Salam() {
+  const salam = "Assalamu`alaikum Wr. Wb.";
+  const splitSalam = salam.split("");
+  let key = 0;
+  const spanSalam = splitSalam.map((item) => <span key={key++}>{item}</span>);
+
+  return (
+    <h2 className="salam" onClick={() => console.log(splitSalam)}>
+      {spanSalam}
+    </h2>
   );
 }
