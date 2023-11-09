@@ -119,6 +119,13 @@ body::-webkit-scrollbar {
       width: 100%;
       flex-direction: column;
     }
+    .prof-detail {
+      width: 95%;
+      height: 90%;
+      img {
+        width: 100%;
+      }
+    }
   }
 
   .content-nofilter-image {
