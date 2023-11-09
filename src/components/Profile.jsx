@@ -22,7 +22,7 @@ export default function Profil({ lang, setProf, prof }) {
     }, 2000);
 
     console.log(salam, h1, article);
-  }, [lang, active]);
+  }, [lang]);
 
   function changeHandler(e) {
     const profSection = document.getElementById("prof");
