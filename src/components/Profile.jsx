@@ -1,26 +1,30 @@
 import { useEffect, useRef } from "react";
 import { dataProfil as data } from "../data/Profile";
 import { dataHome } from "../data/Home";
+import { useState } from "react";
 
 export default function Profil({ lang, setProf, prof }) {
+  const [active, setActive] = useState(false);
   const bookIcon = useRef(null);
+  const title = useRef(null);
 
   useEffect(() => {
-    const selectorSpan = document.querySelectorAll(".salam span");
+    const salam = document.querySelector(".salam");
+    const article = document.querySelector("article");
+    const h1 = title.current;
 
-    let i = 0;
-    setInterval(() => {
-      selectorSpan.forEach((span) => {
-        span.classList.add("opacity-salam");
-      });
+    salam.classList.add("figures-animation1");
+    h1.classList.add("left-slide-in");
+    article.classList.add("bottom-slide-in");
 
-      selectorSpan[i].classList.remove("opacity-salam");
-      i++;
-      if (i === selectorSpan.length) {
-        i = 0;
-      }
-    }, 100);
-  }, [lang, prof]);
+    setTimeout(() => {
+      salam.classList.remove("figures-animation1");
+      h1.classList.remove("left-slide-in");
+      article.classList.remove("bottom-slide-in");
+    }, 2000);
+
+    console.log(salam, h1, article);
+  }, [lang, active]);
 
   function changeHandler(e) {
     const profSection = document.getElementById("prof");
@@ -61,6 +65,8 @@ export default function Profil({ lang, setProf, prof }) {
     const text = button.lastChild;
     const spans = document.querySelectorAll("#container-greetings > span");
 
+    setActive(!active);
+
     if (icon.classList.contains("bi-book")) {
       icon.classList.replace("bi-book", "bi-book-fill");
       button.classList.add("read-mode-button-click");
@@ -82,7 +88,7 @@ export default function Profil({ lang, setProf, prof }) {
 
   return (
     <section id="profile" style={{ display: "none" }}>
-      <h1>{lang ? "My Profile" : "Profile Saya"}</h1>
+      <h1 ref={title}>{lang ? "My Profile" : "Profile Saya"}</h1>
       <div id="container-greetings">
         <Animations />
         <article>
