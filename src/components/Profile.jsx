@@ -1,10 +1,8 @@
 import { useEffect, useRef } from "react";
 import { dataProfil as data } from "../data/Profile";
 import { dataHome } from "../data/Home";
-import { useState } from "react";
 
 export default function Profil({ lang, setProf, prof }) {
-  const [active, setActive] = useState(false);
   const bookIcon = useRef(null);
   const title = useRef(null);
 
@@ -64,8 +62,6 @@ export default function Profil({ lang, setProf, prof }) {
     const button = icon.parentElement;
     const text = button.lastChild;
     const spans = document.querySelectorAll("#container-greetings > span");
-
-    setActive(!active);
 
     if (icon.classList.contains("bi-book")) {
       icon.classList.replace("bi-book", "bi-book-fill");
