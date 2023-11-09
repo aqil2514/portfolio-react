@@ -1041,11 +1041,23 @@ body::-webkit-scrollbar {
     max-width: 12.5rem;
     max-height: 15.75rem;
   }
+  #profile {
+    padding: 4rem 1rem 5rem;
+  }
+  #profile h1 {
+    margin: 1rem 0;
+  }
   #profile button {
     padding: 0.5rem 1rem;
   }
   #profile select {
     width: 70%;
+  }
+  #profile h2 {
+    font-size: 1.2rem;
+  }
+  #profile p {
+    font-size: 1rem;
   }
   #prof .prof-container {
     width: 100%;
