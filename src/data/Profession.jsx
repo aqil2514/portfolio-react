@@ -289,7 +289,7 @@ export const dataProfSection = [
         {
           id: "cr-gld",
           projectName: "Game Lingo DB",
-          languages: "React JS, Bootstrap",
+          languages: "React JS, SCSS, Express, Mongo DB",
           date: "7/11/2023",
           imgUrl: "https://i.imgur.com/0GtIym1.png",
           projectLink: "https://gamelingo-db.netlify.app/",
