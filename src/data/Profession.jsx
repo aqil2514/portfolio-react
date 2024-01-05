@@ -265,6 +265,17 @@ export const dataProfSection = [
       ],
       creativity: [
         {
+          id: "cr-glt",
+          projectName: "GameLingo Tools",
+          languages: "NextJs",
+          date: "10/9/2023",
+          imgUrl: "https://i.imgur.com/wigaBFS.png",
+          projectLink: "http://gamelingo-tools.vercel.app/",
+          sourceLink: "https://github.com/aqil2514/gamelingo-tools",
+          descId: "Ini adalah situs yang benar-benar saya bangun secara serius. Saya menggunakan Next Js sebagai bahasa utamanya.",
+          descEn: "This is the site that I seriously build it. I use Next Js as main language.",
+        },
+        {
           id: "cr-tf",
           projectName: "Team Flow",
           languages: "HTML, SASS, jQuery",
